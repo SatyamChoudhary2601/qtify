@@ -11,9 +11,6 @@ const Card = ({ data }) => {
                 <Button className={styles.btn}>{data.follow} Follows</Button>
             </div>
             <div></div>
-            {/* <img src={data.img} /> */}
-            {/* <Button>Follows</Button> */}
-
         </div>
     )
 }
