@@ -6,7 +6,9 @@ import axios from "axios"
 
 const Cards = () => {
     const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(false);
     const getMusic = async () => {
+        setLoading(true)
         try {
             const response = await axios.get("https://qtify-backend-labs.crio.do/albums/top")
             console.log(response)
@@ -14,10 +16,16 @@ const Cards = () => {
         } catch (error) {
             console.log(error)
         }
+        setLoading(false)
     }
     useEffect(() => {
         getMusic()
     }, [])
+    if (loading) {
+        return (
+            <div>Loading...</div>
+        )
+    }
     return (
         <div className={styles.cardContainer}>
             <div className={styles.top}>
@@ -25,7 +33,7 @@ const Cards = () => {
                 <h5 className={styles.showAll}>Show all</h5>
             </div>
             <div className={styles.card}>
-                {data.map(item => <Card key={item.id} data={item} />)}
+                {data !== null && data?.map(item => <Card key={item.id} data={item} />)}
             </div>
         </div>
     )
