@@ -5,12 +5,12 @@ const Card = ({ data }) => {
     return (
         <div className={styles.card}>
             <div className={styles.top}>
-                <img src={data.img} />
+                <img src={data.image} />
             </div>
             <div className={styles.bottom}>
-                <Button className={styles.btn}>{data.follow} Follows</Button>
+                <Button className={styles.btn}>{data.follows} Follows</Button>
             </div>
-            <div></div>
+            <p className={styles.title}>{data.title}</p>
         </div>
     )
 }

@@ -1,9 +1,14 @@
 .card {
+  cursor: pointer;
   /* background-color: yellow; */
-  /* width: 159px;
-  height: 170px;
-  border-radius: 10px 10px 0px 0px;
+  /* width: 159px; */
+  /* height: 170px; */
+  /* border-radius: 10px 10px 0px 0px;
   overflow: hidden; */
+}
+.card:hover {
+  scale: 1.05;
+  transition: 0.3s all;
 }
 .top {
   width: 159px;
@@ -34,4 +39,7 @@ img {
   line-height: 15px;
   font-weight: 400;
   margin-left: 6px;
+}
+.title {
+  margin-top: 6px;
 }
