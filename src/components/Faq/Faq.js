@@ -10,7 +10,6 @@ const Faq = () => {
                     <h4 className={styles.title}>FAQ</h4>
                 </div>
                 {FAQ.map((faq, i) => <Accordian data={faq} index={i + 1} key={faq.title} />)}
-                {/* <Accordian /> */}
             </div>
         </div>
     )
