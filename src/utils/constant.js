@@ -19,3 +19,11 @@ export const FAQ = [
     { title: "Is QTify free to use?", content: "Yes! It is 100% free, and has 0% ads!" },
     { title: "Can I download and listen to songs offline?", content: "Sorry, unfortunately we don't provide the service to download any songs." },
 ]
+
+export const TAB = [
+    { title: "All", value: "all" },
+    { title: "Rock", value: "rock" },
+    { title: "Pop", value: "pop" },
+    { title: "Jazz", value: "jazz" },
+    { title: "Blues", value: "blues" },
+]
