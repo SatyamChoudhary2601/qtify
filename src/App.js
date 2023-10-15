@@ -19,8 +19,8 @@ function App() {
         <Section type="album" title="New Albums" url={SLUGS.NEW_ALBUMS} />
         <Divider className="divider" />
         <Section type="song" title="Songs" url={SLUGS.ALL_SONGS} />
-        {/* <Divider className="divider" />
-        <Faq /> */}
+        <Divider className="divider" />
+        <Faq />
       </div>
     </div>
   );
