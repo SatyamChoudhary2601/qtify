@@ -27,7 +27,7 @@ const Section = ({ title, type, url }) => {
     useEffect(() => {
         fetchTopAlbum();
     }, []);
-    if (!loading) {
+    if (loading) {
         return (
             <div className={styles.loading}>
                 <CircularProgress color="primary" />
