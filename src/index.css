@@ -38,3 +38,7 @@ svg {
 .swiper-slide {
   width: auto !important;
 }
+
+.MuiCircularProgress-root {
+  color: var(--color-primary) !important;
+}

@@ -6,14 +6,14 @@ import { CircularProgress } from "@mui/material";
 import Carousel from "../Carousel/Carousel";
 import CustomTab from "../Tab/Tab";
 
-const Cards = ({ title, type, url }) => {
+const Section = ({ title, type, url }) => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(false);
     const [carouselToggle, setCarouselToggle] = useState(true);
     const [tab, setTab] = useState("all");
     const handleToggle = () => {
         setCarouselToggle((carouselToggle) => !carouselToggle);
     };
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false);
     const fetchTopAlbum = async () => {
         setLoading(true);
         try {
@@ -27,8 +27,12 @@ const Cards = ({ title, type, url }) => {
     useEffect(() => {
         fetchTopAlbum();
     }, []);
-    if (loading) {
-        return <CircularProgress color="primary" />;
+    if (!loading) {
+        return (
+            <div className={styles.loading}>
+                <CircularProgress color="primary" />
+            </div>
+        );
     }
     const handleChange = (event, newValue) => {
         setTab(newValue);
@@ -77,4 +81,4 @@ const Cards = ({ title, type, url }) => {
     );
 };
 
-export default Cards;
+export default Section;
