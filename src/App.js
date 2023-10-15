@@ -16,7 +16,10 @@ function App() {
       <Hero />
       <div className="songContainer">
         <Section type="album" title="Top Albums" url={SLUGS.TOP_ALBUMS} />
+        <Section type="album" title="New Albums" url={SLUGS.NEW_ALBUMS} />
+
       </div>
+
     </div>
   );
 }
