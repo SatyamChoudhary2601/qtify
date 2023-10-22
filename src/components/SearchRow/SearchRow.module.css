@@ -1,0 +1,54 @@
+.searchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.searchRow:hover {
+  background-color: #222222;
+}
+.song {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.img {
+  width: 66px;
+  height: 71px;
+  border-radius: 10px;
+}
+
+.songDetail {
+}
+
+.title {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.artist {
+  color: #d8d8d8;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2px;
+}
+.imgContainer {
+  border: 5px solid #222222;
+  border-radius: 12px;
+}
+.likes {
+  color: var(--color-white);
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

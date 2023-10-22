@@ -20,7 +20,7 @@ const CustomTab = ({ recentTab, handleChange }) => {
                 TabIndicatorProps={tabStyles}
             >
                 {TAB.map((item) => (
-                    <Tab label={item.title} value={item.value} />
+                    <Tab label={item.title} value={item.value} key={item} />
                 ))}
             </Tabs>
         </div>

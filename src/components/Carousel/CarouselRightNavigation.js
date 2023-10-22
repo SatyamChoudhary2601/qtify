@@ -10,7 +10,6 @@ const CarouselRightNavigation = () => {
             setIsEnd(swiper.isEnd)
         })
     }, [swiper, swiper.isEnd])
-    console.log(swiper, "isEnd")
     return (
         <div className={styles.rightNavigation}>
             {!isEnd && <RightArrow onClick={() => swiper.slideNext()} />}

@@ -5,6 +5,9 @@ import { ReactComponent as LeftArrow } from "./leftIcon.svg";
 import { ReactComponent as RightArrow } from "./rightIcon.svg";
 import { ReactComponent as UpArrow } from "./UpArrow.svg";
 import { ReactComponent as DownArrow } from "./DownArrow.svg";
+import { ReactComponent as PlayIcon } from "./play.svg";
+
+import songImg from "./songimg.png";
 
 export {
     BrandLogo,
@@ -13,5 +16,7 @@ export {
     LeftArrow,
     RightArrow,
     UpArrow,
-    DownArrow
+    DownArrow,
+    songImg,
+    PlayIcon
 }

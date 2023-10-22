@@ -1,0 +1,30 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-left: -200px;
+}
+svg {
+  cursor: pointer;
+}
+.track {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 10px;
+}
+.trackOuter {
+  width: 676px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--color-white);
+  overflow: hidden;
+}
+.trackInner {
+  width: 20%;
+  height: 6px;
+  background-color: var(--color-primary) !important;
+  z-index: 99;
+}

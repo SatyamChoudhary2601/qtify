@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   height: 48px;
+  position: relative;
 }
 .input {
   width: 502px;

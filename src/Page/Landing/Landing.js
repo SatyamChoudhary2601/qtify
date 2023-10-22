@@ -2,20 +2,21 @@ import Section from "./components/Section/Section";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import { BACKEND_ENDPOINT, SLUGS } from "./utils/constant";
-import { Divider } from "@mui/material";
+import { CircularProgress, Divider } from "@mui/material";
 import Faq from "./components/Faq/Faq";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import { useEffect, useState } from "react";
+import { getTopAlbums } from "./service/service";
 import styles from "./App.module.css";
 import useFetch from "./hook/useFetch";
 
-function App() {
+const Landing = () => {
     const [filteredData, setFilteredData] = useState(null);
     const [tab, setTab] = useState("all");
 
-    const { data: topAlbum, isLoading: topAlbumLoading } = useFetch(`${BACKEND_ENDPOINT}${SLUGS.TOP_ALBUMS}`)
-    const { data: newAlbum, isLoading: newAlbumLoading } = useFetch(`${BACKEND_ENDPOINT}${SLUGS.NEW_ALBUMS}`)
-    const { data: allSongs, isLoading: allSongLoading } = useFetch(`${BACKEND_ENDPOINT}${SLUGS.ALL_SONGS}`)
+    const { newData: topAlbum, isLoading: topAlbumLoading } = useFetch(`${BACKEND_ENDPOINT}${SLUGS.TOP_ALBUMS}`)
+    const { newData: newAlbum, isLoading: newAlbumLoading } = useFetch(`${BACKEND_ENDPOINT}${SLUGS.NEW_ALBUMS}`)
+    const { newData: allSongs, isLoading: allSongLoading } = useFetch(`${BACKEND_ENDPOINT}${SLUGS.ALL_SONGS}`)
 
     useEffect(() => {
         setFilteredData(allSongs)
@@ -33,10 +34,8 @@ function App() {
             setFilteredData(filter);
         }
     };
-
     return (
         <div>
-            <Navbar data={allSongs} />
             <Hero />
             <div className={styles.songContainer}>
                 <Section
@@ -69,7 +68,7 @@ function App() {
                 <MusicPlayer />
             </div>
         </div>
-    );
+    )
 }
 
-export default App;
+export default Landing

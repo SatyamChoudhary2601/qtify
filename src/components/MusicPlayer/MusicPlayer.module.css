@@ -1,0 +1,19 @@
+.music {
+  border-top: 1px solid var(--color-white);
+  box-shadow: 0px -2px 6px 0px rgba(255, 255, 255, 0.35);
+}
+.wrapper {
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.songDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 15%;
+}
+.playerContainer {
+  width: 100%;
+}

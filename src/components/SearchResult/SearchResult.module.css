@@ -1,0 +1,13 @@
+.search {
+  position: absolute;
+  top: 73.5px;
+  padding: 20px;
+  background: var(--color-black);
+  left: 23%;
+  width: 773px;
+  max-height: 455px;
+  z-index: 999;
+  overflow: auto;
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--color-primary);
+}
